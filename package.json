@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "ohmyfood - Openclassrooms Project 3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simoncdn/Ohmyfood.git"
+  },
+  "author": "Simoncdn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simoncdn/Ohmyfood/issues"
+  },
+  "homepage": "https://github.com/simoncdn/Ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.54.5"
+  }
+}
