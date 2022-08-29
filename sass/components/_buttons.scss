@@ -1,24 +1,31 @@
 // Like button // 
-#unchecked{
-    display: block;
+.btn-like-icone{
+    fill:white;
+    stroke: black;
+    stroke-width: 30px;
+    width: 50px;
 }
-#checked{
+input[type="checkbox"] {
     display: none;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: $gradient;
-    color: transparent;
-    opacity: 0%;
-    transition: 500ms ease;
+
+    &:checked + .btn-like{
+        .btn-like-icone{
+            fill: url(#btn-like-linearGradient);
+            stroke-width: 0px;
+            stroke: rgba(0,0,0,0);
+            width: 50px;
+            transition: 400ms ease-out;
+            animation: like 400ms ;
+        }    
+    }
 }
-input[type= "checkbox"] {
-    display: none;
-}
-input[type= "checkbox"]:checked + .heart #checked{
-    display: block;
-    opacity: 100%;
-    transition: 500ms ease;
-}
-input[type= "checkbox"]:checked + .heart #unchecked{
-    display: none;
+@keyframes like{
+    from{
+        width: 60px;
+        opacity: 0;
+    }
+    to{
+        width: 50px;
+        opacity: 1;
+    }
 }
