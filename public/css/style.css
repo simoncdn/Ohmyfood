@@ -40,23 +40,21 @@ input[type=checkbox]:checked + .btn-like .btn-like-icone {
 footer {
   position: fixed;
   bottom: 0%;
-  padding: 20px 0px 40px 20px;
+  padding: 20px 0px 30px 20px;
   background-color: #333;
   width: 100%;
 }
-footer h2 {
-  color: white;
-  font-family: "Shrikhand";
-  padding: 20px 0px;
-  font-size: 20px;
-  font-weight: 300;
+footer img {
+  width: 100px;
+  margin: 10px 0px;
 }
 footer p {
   display: flex;
-  margin-bottom: 8px;
+  margin: 10px 0px;
   font-family: "Roboto";
   color: white;
   font-weight: 300;
+  font-size: 16px;
 }
 footer p .fa-solid {
   font-size: 14px;
@@ -68,6 +66,7 @@ footer a {
   color: white;
   font-family: "Roboto";
   font-weight: 300;
+  font-size: 16px;
 }
 
 body {
@@ -85,6 +84,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: rgb(255, 255, 255);
 }
 
 /*# sourceMappingURL=style.css.map */
