@@ -1,0 +1,24 @@
+// Like button // 
+#unchecked{
+    display: block;
+}
+#checked{
+    display: none;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: $gradient;
+    color: transparent;
+    opacity: 0%;
+    transition: 500ms ease;
+}
+input[type= "checkbox"] {
+    display: none;
+}
+input[type= "checkbox"]:checked + .heart #checked{
+    display: block;
+    opacity: 100%;
+    transition: 500ms ease;
+}
+input[type= "checkbox"]:checked + .heart #unchecked{
+    display: none;
+}
