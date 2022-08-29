@@ -3,9 +3,10 @@
     padding: 0;
     margin: 0;
 }
+@import "./base/typography";
 @import "./utils/variables";
 @import "./components/buttons";
-
+@import "./layout/footer";
 body{
     height: 100vh;
 }
@@ -19,29 +20,4 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-footer{
-    position: fixed;
-    bottom: 0%;
-    padding: 20px;
-    background-color: #333;
-    width: 100%;
-    h2{
-        color: white;
-        font-family: $font-title;
-        margin-bottom: 10px;
-    }
-    p{
-        display: flex;
-        margin-bottom: 8px;
-        font-family: $font-txt;
-        color: white;
-        font-weight: lighter;
-        .fa-solid{
-            font-size: 14px;
-            display: block;
-            width: 25px;
-        }
-    }
 }
