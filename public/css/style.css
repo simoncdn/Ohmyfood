@@ -5,12 +5,8 @@
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url(../Polices/Roboto/Roboto-Black.ttf) format("truetype"), url(../Polices/Roboto/Roboto-BlackItalic.ttf) format("truetype"), url(../Polices/Roboto/Roboto-Bold.ttf) format("truetype"), url("../Polices/Roboto/Roboto-Light.ttf") format("truetype"), url(../Polices/Roboto/Roboto-Medium.ttf) format("truetype"), url(../Polices/Roboto/Roboto-Thin.ttf) format("truetype"), url(../Polices/Roboto/Roboto-Regular.ttf) format("truetype");
-}
-@font-face {
   font-family: "Shrikhand";
-  src: url(../Polices/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
+  src: url(/Polices/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
 }
 .btn-like-icone {
   fill: white;
@@ -44,21 +40,23 @@ input[type=checkbox]:checked + .btn-like .btn-like-icone {
 footer {
   position: fixed;
   bottom: 0%;
-  padding: 20px;
+  padding: 20px 0px 40px 20px;
   background-color: #333;
   width: 100%;
 }
 footer h2 {
   color: white;
   font-family: "Shrikhand";
-  margin-bottom: 10px;
+  padding: 20px 0px;
+  font-size: 20px;
+  font-weight: 300;
 }
 footer p {
   display: flex;
   margin-bottom: 8px;
   font-family: "Roboto";
   color: white;
-  font-weight: lighter;
+  font-weight: 300;
 }
 footer p .fa-solid {
   font-size: 14px;
@@ -68,6 +66,8 @@ footer p .fa-solid {
 footer a {
   text-decoration: none;
   color: white;
+  font-family: "Roboto";
+  font-weight: 300;
 }
 
 body {

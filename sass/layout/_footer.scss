@@ -1,20 +1,22 @@
 footer{
     position: fixed;
     bottom: 0%;
-    padding: 20px;
+    padding: 20px 0px 40px 20px;
     background-color: #333;
     width: 100%;
     h2{
         color: white;
         font-family: $font-title;
-        margin-bottom: 10px;
+        padding: 20px 0px;
+        font-size: 20px;
+        font-weight: 300;
     }
     p{
         display: flex;
         margin-bottom: 8px;
         font-family: $font-txt;
         color: white;
-        font-weight: lighter;
+        font-weight: 300;
         .fa-solid{
             font-size: 14px;
             display: block;
@@ -24,5 +26,7 @@ footer{
     a{
         text-decoration: none;
         color: white;
+        font-family: $font-txt;
+        font-weight: 300;
     }
 }
