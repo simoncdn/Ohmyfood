@@ -4,15 +4,37 @@
   margin: 0;
 }
 
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
 @font-face {
   font-family: "Shrikhand";
   src: url(/Polices/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
 }
+.btn-explore {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  color: #f0f0f0;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
 .btn-like-icone {
   fill: white;
   stroke: black;
   stroke-width: 30px;
-  width: 50px;
+  width: 20px;
 }
 
 input[type=checkbox] {
@@ -22,23 +44,75 @@ input[type=checkbox]:checked + .btn-like .btn-like-icone {
   fill: url(#btn-like-linearGradient);
   stroke-width: 0px;
   stroke: rgba(0, 0, 0, 0);
-  width: 50px;
+  width: 20px;
   transition: 400ms ease-out;
   animation: like 400ms;
 }
 
 @keyframes like {
   from {
-    width: 60px;
+    width: 25px;
     opacity: 0;
   }
   to {
-    width: 50px;
+    width: 20px;
     opacity: 1;
   }
 }
+.restaurant-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-card {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+}
+
+.restaurant-card-index {
+  background-color: white;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.restaurant-card-index h3 {
+  font-family: "Roboto";
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.restaurant-card-index p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.card1 .restaurant-card-image {
+  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 15px 15px 0px 0px;
+  height: 170px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .fa-arrow-left {
+  display: none;
+}
+header img {
+  width: 170px;
+  margin: 20px 0px;
+}
+
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0%;
   padding: 20px 0px 30px 20px;
   background-color: #333;
@@ -69,22 +143,110 @@ footer a {
   font-size: 16px;
 }
 
-body {
-  height: 100vh;
-}
-
-h1 {
-  font-size: 50px;
-  color: blueviolet;
-}
-
-.coeur {
+.location-container {
   width: 100%;
-  height: 200px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(255, 255, 255);
+  padding: 10px 0px;
+  background-color: #ebebeb;
+  border-top: 1px solid #c0c0c0;
+  box-shadow: inset 0px 1px 5px #c0c0c0;
+}
+.location-container .fa-location-dot {
+  color: #333;
+  margin-right: 10px;
+}
+.location-container input {
+  width: 100%;
+  border: none;
+  background-color: #ebebeb;
+  font-size: 16px;
+  font-style: "Roboto";
+  padding: 5px 10px;
+}
+.location-container input[value="Paris, Belleville"] {
+  font-size: 16px;
+}
+.location-container input[type=text]:focus {
+  border: 1px solid red;
+}
+
+.presentation-container {
+  width: 100%;
+  height: auto;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+.presentation-container h1 {
+  font-family: "Roboto";
+  font-size: 24px;
+  padding: 0px 30px;
+}
+.presentation-container p {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  padding: 20px 0px;
+}
+
+.functionning-container {
+  width: 100%;
+  padding: 20px;
+}
+.functionning-container h2 {
+  margin: 20px 0px;
+  font-family: "Roboto";
+}
+.functionning-container .functionning-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.functionning-container .functionning-steps .steps {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 50px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background-color: #f0f0f0;
+  margin: 10px 0px;
+  padding: 35px 0px;
+}
+.functionning-container .functionning-steps .steps-number {
+  position: relative;
+  left: -12px;
+  font-size: 12px;
+  font-family: "Roboto";
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 9px;
+}
+.functionning-container .functionning-steps .steps .fa-solid {
+  color: #828282;
+  margin-right: 20px;
+  margin-left: 12px;
+  font-size: 20px;
+}
+.functionning-container .functionning-steps .steps p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.restaurant-container {
+  width: 100%;
+  padding: 20px;
+  background-color: #ebebeb;
+}
+.restaurant-container h2 {
+  margin: 20px 0px;
+  font-family: "Roboto";
 }
 
 /*# sourceMappingURL=style.css.map */

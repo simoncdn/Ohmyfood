@@ -1,9 +1,24 @@
+// explore button //
+
+.btn-explore{
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    color: #f0f0f0;
+    font-family: $font-txt;
+    font-weight: 500;
+    font-size: 16px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+
 // Like button // 
 .btn-like-icone{
     fill:white;
     stroke: black;
     stroke-width: 30px;
-    width: 50px;
+    width: 20px;
 }
 input[type="checkbox"] {
     display: none;
@@ -13,7 +28,7 @@ input[type="checkbox"] {
             fill: url(#btn-like-linearGradient);
             stroke-width: 0px;
             stroke: rgba(0,0,0,0);
-            width: 50px;
+            width: 20px;
             transition: 400ms ease-out;
             animation: like 400ms ;
         }    
@@ -21,11 +36,11 @@ input[type="checkbox"] {
 }
 @keyframes like{
     from{
-        width: 60px;
+        width: 25px;
         opacity: 0;
     }
     to{
-        width: 50px;
+        width: 20px;
         opacity: 1;
     }
 }
