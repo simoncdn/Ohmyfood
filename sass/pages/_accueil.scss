@@ -29,7 +29,7 @@
 .presentation-container{
     width: 100%;
     height: auto;
-    padding: 40px 20px;
+    padding: 40px 20px 60px 20px;
     text-align: center;
     background-color: #f0f0f0;
     h1{
@@ -49,6 +49,7 @@
 .functionning-container{
     width: 100%;
     padding: 20px;
+    margin-bottom: 40px;
     h2{
         margin: 20px 0px;
         font-family: $font-txt; 
@@ -95,7 +96,7 @@
 .restaurant-container{
     width: 100%;
     padding: 20px;
-    background-color: #ebebeb;
+    background-color: #f0f0f0;
     h2{
         margin: 20px 0px;
         font-family: $font-txt;
