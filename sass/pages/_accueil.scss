@@ -45,7 +45,9 @@
         padding: 20px 0px;
     }
 }
-
+.btn-explore{
+    @include btn-gradient(16px, 15px, 30px);
+}
 .functionning-container{
     width: 100%;
     padding: 20px;
