@@ -1,7 +1,6 @@
 .restaurant-cards{
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
 }
 
 .restaurant-card{
@@ -9,10 +8,38 @@
     height: 250px;
     border-radius: 15px;
     margin-bottom: 15px;
+    cursor: pointer;
     a{
         text-decoration: none;
         color: black;
     }
+}
+.restaurant-card-image {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 170px;
+    margin: 0;
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px 15px 0px 0px;
+    }
+}
+.restaurant-card-new{
+    background-color: #99e2d0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border-radius: 2px;
+    p{
+        color: #139273;
+        padding: 7px 12px;
+        font-family: $font-txt;
+        font-weight: 500;
+        font-size: 14px;
+    }   
 }
 .restaurant-card-index{
     background-color: white;
@@ -30,58 +57,5 @@
         font-family: $font-txt;
         font-size: 16px;
         font-weight: 300;
-    }
-}
-.restaurant-card-new{
-    position: absolute;
-    top: 17%;
-    left: 72%;
-    border-radius: 5px;
-    width: 80px;
-    height: 30px;
-    background-color: rgb(126, 191, 133);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    p{
-        font-family: $font-txt;
-        color: rgb(73, 148, 73);
-    }
-}
-
-.card1{
-    .restaurant-card-image{
-        background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-        background-position: 50% 50%;
-        background-size: cover;
-        border-radius: 15px 15px 0px 0px;
-        height: 170px;
-    }
-}
-.card2{
-    .restaurant-card-image{
-        background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-        background-position: 50% 50%;
-        background-size: cover;
-        border-radius: 15px 15px 0px 0px;
-        height: 170px;
-    }
-}
-.card3{
-    .restaurant-card-image{
-        background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-        background-position: 50% 50%;
-        background-size: cover;
-        border-radius: 15px 15px 0px 0px;
-        height: 170px;
-    }
-}
-.card4{
-    .restaurant-card-image{
-        background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-        background-position: 50% 50%;
-        background-size: cover;
-        border-radius: 15px 15px 0px 0px;
-        height: 170px;
     }
 }

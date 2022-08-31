@@ -22,6 +22,12 @@ body {
   font-weight: 500;
   font-size: 16px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 500ms ease;
+  cursor: pointer;
+}
+.btn-explore:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  transition: 500ms ease;
 }
 
 .restaurant-card-like {
@@ -30,24 +36,22 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-.btn-like-icone {
-  fill: white;
-  stroke: black;
-  stroke-width: 20px;
-  width: 25px;
-}
-
-input[type=checkbox] {
+.restaurant-card-like input[type=checkbox] {
   display: none;
 }
-input[type=checkbox]:checked + .btn-like .btn-like-icone {
+.restaurant-card-like input[type=checkbox]:checked + .btn-like .btn-like-icone {
   fill: url(#btn-like-linearGradient);
   stroke-width: 0px;
   stroke: rgba(0, 0, 0, 0);
   width: 25px;
-  transition: 400ms ease-out;
-  animation: like 400ms;
+  transition: 500ms ease-out;
+  animation: like 500ms;
+}
+.restaurant-card-like .btn-like-icone {
+  fill: white;
+  stroke: black;
+  stroke-width: 20px;
+  width: 25px;
 }
 
 @keyframes like {
@@ -63,7 +67,6 @@ input[type=checkbox]:checked + .btn-like .btn-like-icone {
 .restaurant-cards {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
 }
 
 .restaurant-card {
@@ -71,10 +74,40 @@ input[type=checkbox]:checked + .btn-like .btn-like-icone {
   height: 250px;
   border-radius: 15px;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 .restaurant-card a {
   text-decoration: none;
   color: black;
+}
+
+.restaurant-card-image {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 170px;
+  margin: 0;
+}
+.restaurant-card-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.restaurant-card-new {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 2px;
+}
+.restaurant-card-new p {
+  color: #139273;
+  padding: 7px 12px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
 }
 
 .restaurant-card-index {
@@ -96,55 +129,6 @@ input[type=checkbox]:checked + .btn-like .btn-like-icone {
   font-weight: 300;
 }
 
-.restaurant-card-new {
-  position: absolute;
-  top: 17%;
-  left: 72%;
-  border-radius: 5px;
-  width: 80px;
-  height: 30px;
-  background-color: rgb(126, 191, 133);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.restaurant-card-new p {
-  font-family: "Roboto";
-  color: rgb(73, 148, 73);
-}
-
-.card1 .restaurant-card-image {
-  background: url(/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 15px 15px 0px 0px;
-  height: 170px;
-}
-
-.card2 .restaurant-card-image {
-  background: url(/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 15px 15px 0px 0px;
-  height: 170px;
-}
-
-.card3 .restaurant-card-image {
-  background: url(/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 15px 15px 0px 0px;
-  height: 170px;
-}
-
-.card4 .restaurant-card-image {
-  background: url(/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  border-radius: 15px 15px 0px 0px;
-  height: 170px;
-}
-
 header {
   width: 100%;
   display: flex;
@@ -163,7 +147,7 @@ footer {
   position: relative;
   bottom: 0%;
   padding: 20px 0px 30px 20px;
-  background-color: #333;
+  background-color: #353535;
   width: 100%;
 }
 footer img {
@@ -189,6 +173,7 @@ footer a {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .location-container {
@@ -198,7 +183,7 @@ footer a {
   justify-content: center;
   align-items: center;
   padding: 10px 0px;
-  background-color: #ebebeb;
+  background-color: #eaeaea;
   border-top: 1px solid #c0c0c0;
   box-shadow: inset 0px 1px 5px #c0c0c0;
 }
@@ -209,7 +194,7 @@ footer a {
 .location-container input {
   width: 100%;
   border: none;
-  background-color: #ebebeb;
+  background-color: #eaeaea;
   font-size: 16px;
   font-style: "Roboto";
   padding: 5px 10px;
@@ -226,7 +211,7 @@ footer a {
   height: auto;
   padding: 40px 20px 60px 20px;
   text-align: center;
-  background-color: #f0f0f0;
+  background-color: #f6f6f6;
 }
 .presentation-container h1 {
   font-family: "Roboto";
@@ -260,11 +245,21 @@ footer a {
   align-items: center;
   width: 95%;
   height: 50px;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 15px;
-  background-color: #f0f0f0;
+  background-color: #f6f6f6;
   margin: 10px 0px;
   padding: 35px 0px;
+  transition: 500ms ease;
+  cursor: pointer;
+}
+.functionning-container .functionning-steps .steps:hover {
+  background-color: #f5edff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: 500ms ease;
+}
+.functionning-container .functionning-steps .steps:hover .fa-solid {
+  color: #9356DC;
 }
 .functionning-container .functionning-steps .steps-number {
   position: relative;
@@ -280,7 +275,7 @@ footer a {
   color: #828282;
   margin-right: 20px;
   margin-left: 12px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .functionning-container .functionning-steps .steps p {
   font-family: "Roboto";
@@ -291,7 +286,7 @@ footer a {
 .restaurant-container {
   width: 100%;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #f6f6f6;
 }
 .restaurant-container h2 {
   margin: 20px 0px;

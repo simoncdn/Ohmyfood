@@ -3,7 +3,7 @@
     height: auto;
     @include flexcenter;
     padding: 10px 0px;
-    background-color: #ebebeb;
+    background-color: #eaeaea;
     border-top: 1px solid #c0c0c0;
     box-shadow: inset 0px 1px 5px #c0c0c0;
     .fa-location-dot{
@@ -13,7 +13,7 @@
     input{
         width: 100%;
         border: none;
-        background-color: #ebebeb;
+        background-color: #eaeaea;
         font-size: 16px;
         font-style: $font-txt;
         padding: 5px 10px;
@@ -31,7 +31,7 @@
     height: auto;
     padding: 40px 20px 60px 20px;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #f6f6f6;
     h1{
         font-family: $font-txt;
         font-size: 24px;
@@ -63,11 +63,21 @@
             align-items: center;
             width: 95%;
             height: 50px;
-            box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
             border-radius: 15px;
-            background-color: #f0f0f0;
+            background-color: #f6f6f6;
             margin: 10px 0px;
             padding: 35px 0px;
+            transition: 500ms ease;
+            cursor: pointer;
+            &:hover{
+                background-color: #f5edff;
+                box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+                transition: 500ms ease;
+            }
+            &:hover .fa-solid{
+                color: $color-primary;
+            }
             &-number{
                 position: relative;
                 left: -12px;
@@ -82,7 +92,7 @@
                 color: #828282;
                 margin-right: 20px;
                 margin-left: 12px;
-                font-size: 20px
+                font-size: 18px;
             }
             p{
                 font-family: $font-txt;
@@ -96,7 +106,7 @@
 .restaurant-container{
     width: 100%;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #f6f6f6;
     h2{
         margin: 20px 0px;
         font-family: $font-txt;
