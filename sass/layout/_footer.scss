@@ -1,32 +1,37 @@
 footer{
     position: relative;
-    bottom: 0%;
+    display: flex;
+    flex-direction: column;
     padding: 20px 0px 30px 20px;
     background-color: #353535;
     width: 100%;
-    img{
-        width: 100px;
+    .footer-img{
         margin: 10px 0px;
-    }
-    p{
-        display: flex;
-        margin: 10px 0px;
-        font-family: $font-txt;
-        color: white;
-        font-weight: 300;
-        font-size: 16px;
-        .fa-solid{
-            font-size: 14px;
-            display: block;
-            width: 25px;
+        img{
+            width: 100px;
         }
     }
-    a{
-        text-decoration: none;
-        color: white;
-        font-family: $font-txt;
-        font-weight: 300;
-        font-size: 16px;
-        cursor: pointer;
+    .footer-txt{
+        p{
+            display: flex;
+            margin: 10px 0px;
+            font-family: $font-txt;
+            color: white;
+            font-weight: 300;
+            font-size: 16px;
+            .fa-solid{
+                font-size: 14px;
+                display: block;
+                width: 25px;
+            }
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-family: $font-txt;
+            font-weight: 300;
+            font-size: 16px;
+            cursor: pointer;
+        }
     }
 }

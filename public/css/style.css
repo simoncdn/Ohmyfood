@@ -85,108 +85,14 @@ body {
     opacity: 1;
   }
 }
-.restaurant-cards {
-  display: flex;
-  flex-direction: column;
-}
-
-.restaurant-card {
-  width: 100%;
-  height: 250px;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  transition: 500ms ease;
-}
-.restaurant-card a {
-  text-decoration: none;
-  color: black;
-}
-.restaurant-card:hover {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
-  transition: 500ms ease;
-}
-
-.restaurant-card-image {
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 170px;
-  margin: 0;
-}
-.restaurant-card-image img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  border-radius: 15px 15px 0px 0px;
-}
-
-.restaurant-card-new {
-  background-color: #99e2d0;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  border-radius: 2px;
-}
-.restaurant-card-new p {
-  color: #139273;
-  padding: 7px 12px;
-  font-family: "Roboto";
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.restaurant-card-index {
-  background-color: white;
-  height: 80px;
-  padding: 15px 15px;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 0px 0px 15px 15px;
-}
-.restaurant-card-index h3 {
-  font-family: "Roboto";
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-.restaurant-card-index p {
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 300;
-}
-
-header {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-header a {
-  color: black;
-  text-decoration: none;
-}
-header a .fa-arrow-left {
-  display: block;
-  position: absolute;
-  top: 35%;
-  left: 6%;
-  font-size: 22px;
-}
-header img {
-  width: 170px;
-  margin: 20px 0px;
-}
-
 .loader-container {
   width: 100%;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
   position: fixed;
   overflow: hidden;
   z-index: -11;
-  animation: fadeout 3s ease-out;
+  animation: load 3s ease-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,7 +125,7 @@ header img {
     opacity: 0;
   }
 }
-@keyframes fadeout {
+@keyframes load {
   0% {
     opacity: 1;
     overflow: hidden;
@@ -232,18 +138,44 @@ header img {
     opacity: 0;
   }
 }
+header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header a {
+  color: black;
+  text-decoration: none;
+}
+header a .fa-arrow-left {
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 6%;
+  font-size: 22px;
+}
+header img {
+  width: 170px;
+  margin: 20px 0px;
+}
+
 footer {
   position: relative;
-  bottom: 0%;
+  display: flex;
+  flex-direction: column;
   padding: 20px 0px 30px 20px;
   background-color: #353535;
   width: 100%;
 }
-footer img {
-  width: 100px;
+footer .footer-img {
   margin: 10px 0px;
 }
-footer p {
+footer .footer-img img {
+  width: 100px;
+}
+footer .footer-txt p {
   display: flex;
   margin: 10px 0px;
   font-family: "Roboto";
@@ -251,12 +183,12 @@ footer p {
   font-weight: 300;
   font-size: 16px;
 }
-footer p .fa-solid {
+footer .footer-txt p .fa-solid {
   font-size: 14px;
   display: block;
   width: 25px;
 }
-footer a {
+footer .footer-txt a {
   text-decoration: none;
   color: white;
   font-family: "Roboto";
@@ -396,6 +328,77 @@ footer a {
 .restaurant-container h2 {
   margin: 20px 0px;
   font-family: "Roboto";
+}
+
+.restaurant-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-card {
+  width: 100%;
+  height: 250px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  transition: 500ms ease;
+}
+.restaurant-card a {
+  text-decoration: none;
+  color: black;
+}
+.restaurant-card:hover {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.35);
+  transition: 500ms ease;
+}
+
+.restaurant-card-image {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 170px;
+  margin: 0;
+}
+.restaurant-card-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.restaurant-card-new {
+  background-color: #99e2d0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 2px;
+}
+.restaurant-card-new p {
+  color: #139273;
+  padding: 7px 12px;
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.restaurant-card-index {
+  background-color: white;
+  height: 80px;
+  padding: 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0px 0px 15px 15px;
+}
+.restaurant-card-index h3 {
+  font-family: "Roboto";
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.restaurant-card-index p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .restaurant-image {
@@ -675,15 +678,57 @@ footer a {
   .restaurant-container .restaurant-cards .restaurant-card {
     width: 45%;
   }
-  footer img {
-    position: absolute;
-    right: 10%;
-    top: 30%;
-    width: 300px;
+  footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
+  footer .footer-img img {
+    width: 250px;
   }
   .restaurant-image img {
     display: relative;
     transform: translateY(-150px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant-image img {
+    transform: translateY(-400px);
+  }
+  .menu__title {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .menu__title h1 {
+    font-size: 35px;
+  }
+  .menu__card__enter h2, .menu__card__dish h2, .menu__card__dessert h2 {
+    font-size: 24px;
+  }
+  .menu__card__enter h2::after, .menu__card__dish h2::after, .menu__card__dessert h2::after {
+    width: 4%;
+  }
+  .menu__card {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .menu__card .menu__card__dish {
+    margin: 0px 20px;
+  }
+  .menu__card .menu__cards__container {
+    align-items: center;
+    width: 300px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+  }
+  footer .footer-txt {
+    display: flex;
+  }
+  footer .footer-txt p {
+    margin: 0px 20px;
   }
 }
 

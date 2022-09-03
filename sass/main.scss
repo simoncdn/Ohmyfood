@@ -1,12 +1,11 @@
 
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/placeholder";
 @import "./base/body";
 @import "./base/typography";
 @import "./components/buttons";
 @import "./components/like_btn";
-@import "./components/card";
+@import "./components/loader";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./pages/accueil";

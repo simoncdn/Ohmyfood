@@ -70,11 +70,13 @@
         }
     }
     footer{
-        img{
-            position: absolute;
-            right: 10%;
-            top: 30%;
-            width: 300px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 20px 30px;
+        .footer-img{
+            img{
+                width: 250px;
+            }
         }
     }
     .restaurant-image{
@@ -86,5 +88,49 @@
 }
 
 @media screen and (min-width: 992px) {
+    .restaurant-image{
+        img{
+            transform: translateY(-400px);
+        }
+    }
+    .menu__title{
+        justify-content: center;
+        margin-bottom: 40px;
+        h1{
+            font-size: 35px;
+        }
+    }
+    .menu__card__enter, .menu__card__dish, .menu__card__dessert{
+        h2{
+            font-size: 24px;
+        }
+        h2::after{
+            width: 4%;
+        }
+    }
+    .menu__card{
+        display: flex;
+        justify-content: space-evenly;
+        .menu__card__dish{
+            margin: 0px 20px;
+        }
+        .menu__cards__container{
+            align-items: center;
+            width: 300px;
+        }
+    }
     
+    
+    footer{
+        flex-direction: column;
+        align-items: center;
+        height: 200px;
+        .footer-txt{
+            display: flex;
+            p{
+                margin: 0px 20px;
+            }
+        }
+    }
+
 }
