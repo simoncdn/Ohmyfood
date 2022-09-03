@@ -1,12 +1,11 @@
-.restaurant-card-like{
+.btn__like{
     width: 15%;
     @include flexcenter;
-
     input[type="checkbox"] {
         display: none;        
-        &:checked + .btn-like{
-            .btn-like-icone{
-                fill: url(#btn-like-linearGradient);
+        &:checked + .btn__like__label{
+            .btn__like__icone{
+                fill: url(#btn__like__linearGradient);
                 stroke-width: 0px;
                 stroke: rgba(0,0,0,0);
                 width: 25px;
@@ -15,8 +14,8 @@
             }    
         }
     }
-    .btn-like-icone{
-        fill:white;
+    .btn__like__icone{
+        fill:transparent;
         stroke: black;
         stroke-width: 20px;
         width: 25px;

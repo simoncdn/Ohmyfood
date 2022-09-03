@@ -1,68 +1,3 @@
-.enter__card {
-  width: 100%;
-  height: 70px;
-  display: flex;
-  position: relative;
-  justify-content: s;
-  align-items: flex-end;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-.enter__card__name {
-  display: flex;
-  flex-direction: column;
-  padding: 12px 0px 12px 15px;
-  text-overflow: clip;
-}
-.enter__card__name h3 {
-  font-size: 18px;
-  font-family: "Roboto";
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.enter__card__name p {
-  font-family: "Roboto";
-  font-size: 16px;
-  font-weight: 300;
-}
-.enter__card__price {
-  font-family: "Roboto";
-  font-weight: 500;
-  margin: 12px 15px 12px 0px;
-}
-.enter__card__validation {
-  width: 60px;
-  transform: translateX(60px);
-  height: 100%;
-  background-color: #99E2d0;
-  border-radius: 0px 15px 15px 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 500ms ease;
-}
-.enter__card__validation .fa-circle-check {
-  font-size: 20px;
-  color: white;
-}
-.enter__card:hover .enter__card__validation {
-  transform: translateX(0px);
-  transition: 500ms ease;
-}
-.enter__card:hover .enter__card__validation .fa-circle-check {
-  animation: rotate 500ms ease-out;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 *, ::after, ::before {
   padding: 0;
   margin: 0;
@@ -74,7 +9,7 @@ body {
 }
 
 @font-face {
-  font-family: "Shrikhand";
+  font-family: "shrikhand";
   src: url(/Polices/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
 }
 .btn-explore {
@@ -115,25 +50,25 @@ body {
   opacity: 80%;
 }
 
-.restaurant-card-like {
+.btn__like {
   width: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.restaurant-card-like input[type=checkbox] {
+.btn__like input[type=checkbox] {
   display: none;
 }
-.restaurant-card-like input[type=checkbox]:checked + .btn-like .btn-like-icone {
-  fill: url(#btn-like-linearGradient);
+.btn__like input[type=checkbox]:checked + .btn__like__label .btn__like__icone {
+  fill: url(#btn__like__linearGradient);
   stroke-width: 0px;
   stroke: rgba(0, 0, 0, 0);
   width: 25px;
   transition: 500ms ease-out;
   animation: like 500ms;
 }
-.restaurant-card-like .btn-like-icone {
-  fill: white;
+.btn__like .btn__like__icone {
+  fill: transparent;
   stroke: black;
   stroke-width: 20px;
   width: 25px;
@@ -216,12 +151,21 @@ body {
 
 header {
   width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .fa-arrow-left {
-  display: none;
+header a {
+  color: black;
+  text-decoration: none;
+}
+header a .fa-arrow-left {
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 6%;
+  font-size: 22px;
 }
 header img {
   width: 170px;
@@ -397,21 +341,143 @@ footer a {
   font-family: "Roboto";
 }
 
+.restaurant-image {
+  height: 200px;
+  width: 100%;
+}
+.restaurant-image img {
+  width: 100%;
+}
+
 .menu {
   width: 100%;
-  height: 600px;
   padding: 20px;
   border-radius: 30px 30px 0px 0px;
   z-index: 10;
-  background-color: #c0c0c0;
+  background-color: #f6f6f6;
+  position: relative;
 }
 .menu__title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  padding-top: 10px;
 }
 .menu__title h1 {
-  font-family: "Shrinkhand", "sans-serif";
+  font-family: "Shrikhand";
+  font-size: 28px;
+}
+
+.menu__card__enter h2, .menu__card__dish h2, .menu__card__dessert h2 {
+  font-size: 16px;
+  font-weight: 300;
+  display: inline;
+  font-family: "Roboto";
+}
+.menu__card__enter h2::after, .menu__card__dish h2::after, .menu__card__dessert h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10%;
+  height: 3px;
+  background-color: #99E2d0;
+  margin-top: 5px;
+}
+
+.menu__cards__container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.menu__cards__container .menu__cards {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.menu__cards__container .menu__cards__name {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 500ms ease;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__cards__container .menu__cards__name h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+}
+.menu__cards__container .menu__cards__name p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 300;
+}
+.menu__cards__container .menu__cards__price {
+  transition: all 500ms ease;
+  padding: 0px 10px;
+  font-weight: 500;
+}
+.menu__cards__container .menu__cards__validation {
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(60px);
+  transition: 500ms ease;
+  background-color: #99E2d0;
+}
+.menu__cards__container .menu__cards__validation .fa-circle-check {
+  font-size: 20px;
+  color: white;
+}
+.menu__cards__container .menu__cards:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 500ms ease;
+}
+.menu__cards__container .menu__cards:hover .menu__cards__price {
+  transform: translateX(-60px);
+  padding-left: 70px;
+  transition: all 500ms ease;
+}
+.menu__cards__container .menu__cards:hover .menu__cards__validation {
+  transform: translateX(0px);
+}
+.menu__cards__container .menu__cards:hover .menu__cards__validation .fa-circle-check {
+  animation: rotate 500ms ease-out;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes valide {}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
