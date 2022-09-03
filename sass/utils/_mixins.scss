@@ -17,7 +17,7 @@
     cursor: pointer;
     padding: $paddingY $paddingX;
     &:hover{
-        box-shadow: 0px 5px 10px rgba(0,0,0,0.40);
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.50);
         transition: 500ms ease;
         opacity: 80%;
     }
