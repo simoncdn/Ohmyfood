@@ -1,3 +1,90 @@
 @media screen and (min-width: 768px) {
+    header{
+        z-index: 2;
+        background-color: white;
+        a{
+            .fa-arrow-left{
+                font-size: 32px;
+            }
+        }
+        img{
+            width: 300px;
+            margin: 30px 0px;
+        }
+    }
+    .location-container{
+        .fa-location-dot{
+            font-size: 20px;
+        }
+        input{
+            font-size: 20px;
+        }
+        input[value="Paris, Belleville"]{
+            font-size: 20px;
+        }
+    }
+    .presentation-container{
+        h1{
+            font-size: 34px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    .btn-explore{
+        @include btn-gradient(20px, 20px, 40px);
+        margin-top: 20px;
+    }
+    .functionning-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            font-size: 30px;
+            margin: 30px 0px;
+        }
+        .functionning-steps{
+            flex-direction: row;
+            width: 95%;
+            .steps{
+                width: 33%;
+                &:nth-child(2){
+                    margin: 0px 20px;
+                }
+            }
+        }
+    }
+    .restaurant-container{
+        h2{
+            text-align: center;
+            font-size: 30px;
+            margin: 30px 0px;
+        }
+        .restaurant-cards{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .restaurant-card{
+                width: 45%;
+            }
+        }
+    }
+    footer{
+        img{
+            position: absolute;
+            right: 10%;
+            top: 30%;
+            width: 300px;
+        }
+    }
+    .restaurant-image{
+        img{
+            display: relative;
+            transform: translateY(-150px);
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
     
 }

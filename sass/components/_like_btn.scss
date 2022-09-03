@@ -5,7 +5,7 @@
         display: none;        
         &:checked + .btn__like__label{
             .btn__like__icone{
-                fill: url(#btn__like__linearGradient);
+                fill: url(#btn__like__linearGradient-1);
                 stroke-width: 0px;
                 stroke: rgba(0,0,0,0);
                 width: 25px;

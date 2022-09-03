@@ -60,7 +60,7 @@ body {
   display: none;
 }
 .btn__like input[type=checkbox]:checked + .btn__like__label .btn__like__icone {
-  fill: url(#btn__like__linearGradient);
+  fill: url(#btn__like__linearGradient-1);
   stroke-width: 0px;
   stroke: rgba(0, 0, 0, 0);
   width: 25px;
@@ -179,6 +179,59 @@ header img {
   margin: 20px 0px;
 }
 
+.loader-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  overflow: hidden;
+  z-index: -11;
+  animation: fadeout 3s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-container .loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-top: 3px solid #9356DC;
+  animation: loading 3s linear;
+  opacity: 0;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  33% {
+    transform: rotate(360deg);
+    border-top: 3px solid #FF79DA;
+  }
+  66% {
+    transform: rotate(720deg);
+    border-top: 3px solid #99E2d0;
+  }
+  100% {
+    transform: rotate(1080deg);
+    border-top: 3px solid #9356DC;
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    overflow: hidden;
+    z-index: 500;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 footer {
   position: relative;
   bottom: 0%;
@@ -232,7 +285,7 @@ footer a {
   border: none;
   background-color: #eaeaea;
   font-size: 16px;
-  font-style: "Roboto";
+  font-family: "Roboto";
   padding: 5px 10px;
 }
 .location-container input[value="Paris, Belleville"] {
@@ -522,6 +575,11 @@ footer a {
   animation-delay: 600ms;
 }
 
+.card-10 {
+  animation: fadeout 2000ms;
+  animation-delay: 675ms;
+}
+
 .btn-container {
   display: flex;
   justify-content: center;
@@ -537,6 +595,95 @@ footer a {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    z-index: 2;
+    background-color: white;
+  }
+  header a .fa-arrow-left {
+    font-size: 32px;
+  }
+  header img {
+    width: 300px;
+    margin: 30px 0px;
+  }
+  .location-container .fa-location-dot {
+    font-size: 20px;
+  }
+  .location-container input {
+    font-size: 20px;
+  }
+  .location-container input[value="Paris, Belleville"] {
+    font-size: 20px;
+  }
+  .presentation-container h1 {
+    font-size: 34px;
+  }
+  .presentation-container p {
+    font-size: 20px;
+  }
+  .btn-explore {
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(170deg, #FF79DA, #9356DC);
+    color: #f0f0f0;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 500ms ease;
+    cursor: pointer;
+    padding: 20px 40px;
+    margin-top: 20px;
+  }
+  .btn-explore:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: 500ms ease;
+    opacity: 80%;
+  }
+  .functionning-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .functionning-container h2 {
+    font-size: 30px;
+    margin: 30px 0px;
+  }
+  .functionning-container .functionning-steps {
+    flex-direction: row;
+    width: 95%;
+  }
+  .functionning-container .functionning-steps .steps {
+    width: 33%;
+  }
+  .functionning-container .functionning-steps .steps:nth-child(2) {
+    margin: 0px 20px;
+  }
+  .restaurant-container h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 30px 0px;
+  }
+  .restaurant-container .restaurant-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .restaurant-container .restaurant-cards .restaurant-card {
+    width: 45%;
+  }
+  footer img {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    width: 300px;
+  }
+  .restaurant-image img {
+    display: relative;
+    transform: translateY(-150px);
   }
 }
 
